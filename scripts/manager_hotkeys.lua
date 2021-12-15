@@ -43,25 +43,11 @@ function onWheel(target, notches)
 	end
 	if bScaling then
 		local scale = target.getScale();
-		if UtilityManager.isClientFGU() then
-			local adj = notches * 0.1;
-			if adj < 0 then
-				scale = scale * (1 + adj);
-			else
-				scale = scale * (1 / (1 - adj));
-			end
+		local adj = notches * 0.1;
+		if adj < 0 then
+			scale = scale * (1 + adj);
 		else
-			-- if Input.isShiftPressed() then
-				-- scale = math.floor(scale + notches);
-				-- if scale < 1 then
-					-- scale = 1;
-				-- end
-			-- else
-				scale = scale + (notches * 0.1);
-				if scale < 0.1 then
-					scale = 0.1;
-				end
-			-- end
+			scale = scale * (1 / (1 - adj));
 		end
 		target.setScale(scale); 
 		return true; 
