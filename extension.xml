@@ -7,8 +7,9 @@
     <author>Kelrugem.</author>
     <description>Height box</description>
   </properties>
-  <announcement text="Custom shortcuts v3.3.15.1 for CoreRPG rulesets. \rBy Kelrugem." font="chatfont" />
+  <announcement text="Custom shortcuts for CoreRPG rulesets, dated at 10 January 2022. Copyright 2022 Smiteworks. By Kelrugem." icon="DeekinMightyBard" font="emotefont" />
   <base>
+	<icon name="DeekinMightyBard" file="DeekinMightyBard.jpg" />
 	<!-- Strings -->
     <includefile source="strings.xml" />
 	
