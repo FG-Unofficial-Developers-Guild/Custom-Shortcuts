@@ -5,12 +5,12 @@ function onInit()
 end
 
 function registerOptions()
-	OptionsManager.registerOption2("FACING",false, "option_header_hotkeys", "option_label_Facing", "option_entry_cycler", 
+	OptionsManager.registerOption2("FACING",true, "option_header_hotkeys", "option_label_Facing", "option_entry_cycler", 
 		{ labels = "option_val_ctrl|option_val_alt|option_val_wheel", values = "ctrl|alt|wheel", baselabel = "option_val_shift", baseval = "shift", default = "shift" });
-	OptionsManager.registerOption2("SCALING",false, "option_header_hotkeys", "option_label_Scaling", "option_entry_cycler", 
+	OptionsManager.registerOption2("SCALING",true, "option_header_hotkeys", "option_label_Scaling", "option_entry_cycler", 
 		{ labels = "option_val_shift|option_val_alt|option_val_wheel", values = "shift|alt|wheel", baselabel = "option_val_ctrl", baseval = "ctrl", default = "ctrl" });
 end
-
+-- KEL Look at onWheelHelper in TokenManager as a reference
 function onWheel(target, notches)
 	local sOptFacing = OptionsManager.getOption("FACING");
 	local bFacing = false;
